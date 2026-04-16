@@ -25,12 +25,12 @@ and visual quality settings
 Apply addtional effects onto objects.
 This is done after the scene is rendered.
 
->    * I've used post processing in my own personal projects,
-        for visual effects like:
->       * Bloom
->       * Digital/Analog Glitches
->       * Blur
->       * Depth-of-Field
+>  * I've used post processing in my own personal projects,
+     for visual effects like:
+>    * Bloom
+>    * Digital/Analog Glitches
+>    * Blur
+>    * Depth-of-Field
 
 A render pipeline, in the most simple terms, determines how Unity performs these 3 operations.
 Each render pipleline has its own benefits and drawbacks. Unity provides 3 different render pipelines:
@@ -66,7 +66,21 @@ upgrading assets, which can break some visual effects really easily.
 This is Unity's high-end render pipeline. You get the highest quality, photorealistic lighting,
 support for ray-tracing, volumetrics, screen-space effects, and insanely high-quality shadows.
 
+> This pipeline is great for creating cinematic visuals or realistic scenes. However, because of
+> the performance cost, it is really only meant for high-end PCs or next-gen consoles.
+
 ## Materials
+
+Materials define the surface properties of an object. They tell us how an object responds to different
+lighting conditions. They are used most commmonly with 3D objects.
+
+> In Unity, any renderable 3D object must have 2 components:
+>   * Mesh Filter: Stores information on the geometry of the object.
+>   * Mesh Renderer: Contains Materials and Lighting rules.
+
+Every **material** has a **shader.** It also has several properties that we can assign, such as:
+
+  * **Albedo:** The color or texture.
 
 ## Shaders
 
