@@ -81,11 +81,21 @@ lighting conditions. They are used most commmonly with 3D objects.
 Every **material** has a **shader.** It also has several properties that we can assign, such as:
 
   * **Albedo:** The color or texture.
+  * **Metallic:** The amount of metallic reflection.
+  * **Normal Map:** Simulates small surface details without adding more geometry.
+  * **Height Map:** Simulates depth by displacing the surface of the material.
+  * **Occlusion Map:** Simulates shadows in crevices and corners.
+  * **Emission:** Makes the material emit light, useful for glowing objects.
+
+Materials are saved as local assets in your project. You can drag materials from your project files onto any mesh renderer in any scene.
 
 ## Shaders
 
+A shader is a program that tells the GPU how to render an object. It defines how the surface of an object interacts with light and how it should be drawn on the screen. Shaders can be used to create a wide variety of visual effects, from simple color changes to complex lighting and texturing effects.
 
 ## GLSL
+
+GLSL (OpenGL Shading Language) is a high-level shading language used to write shaders for OpenGL. It is a C-like language that allows developers to write vertex and fragment shaders, which are executed on the GPU to control the rendering of objects in a scene.
 
 ## Shader Graph
 
