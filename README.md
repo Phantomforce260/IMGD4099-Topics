@@ -107,5 +107,7 @@ You can then create a material using this shader and apply it onto objects in yo
 > I often stayed away from Shader Graph because I never fully understood what each node did.
 > But for this course, I tried to experiment with different effects in order to learn what each node could do.
 > Here are some cool nodes that I used and how can they manipulate a shader:
+>
+> 
 
 ## Differences: Unity vs. Unreal
