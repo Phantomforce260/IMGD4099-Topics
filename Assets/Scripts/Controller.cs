@@ -16,16 +16,18 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        // --- Mouse Look ---
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * 100f * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * 100f * Time.deltaTime;
+        if (!Input.GetKey(KeyCode.LeftAlt))
+        {
+            // --- Mouse Look ---
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * 100f * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * 100f * Time.deltaTime;
 
-        rotationY += mouseX;
-        rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+            rotationY += mouseX;
+            rotationX -= mouseY;
+            rotationX = Mathf.Clamp(rotationX, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(rotationX, rotationY, 0f);
-
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, 0f);
+        }
         // --- Movement ---
         float moveX = Input.GetAxis("Horizontal"); // A/D
         float moveZ = Input.GetAxis("Vertical");   // W/S
